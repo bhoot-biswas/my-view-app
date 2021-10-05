@@ -11,3 +11,12 @@ web-build/
 
 # macOS
 .DS_Store
+
+# views
+**/view.js
+**/DesignSystem/Fonts/*.js
+**/DesignSystem/Fonts/*.module.css
+**/*.graphql.js
+**/data.js
+**/view.module.css
+src/Views

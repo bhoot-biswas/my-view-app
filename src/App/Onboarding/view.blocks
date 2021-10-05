@@ -1,0 +1,7 @@
+Onboarding View
+is together
+    Vertical
+    onClick <
+        Text
+        fontSize 18
+        text Onboarding!
