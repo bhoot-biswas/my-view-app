@@ -1,5 +1,11 @@
 AppContent View
 is together
-    Text
-    fontSize 18
-    text AppContent!
+data user.firstName
+    Vertical
+    onClick <setFlowTo ../Onboarding
+        Text
+        fontSize 18
+        text AppContent!
+        Text
+        fontSize 16
+        text <value

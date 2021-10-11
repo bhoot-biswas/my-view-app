@@ -1,7 +1,19 @@
 import { useFonts } from 'expo-font';
 import { ViewsFlow } from 'Views/Flow.js';
+import { DataProvider } from 'Views/Data.js';
 import React from 'react';
 import View from './view.js';
+
+let value = {
+  user: {
+    firstName: 'Mary',
+    lastName: 'Summers',
+    email: 'mary.summers@email.com',
+    profile: {
+      dateOfBirth: '1982-04-20',
+    },
+  },
+};
 
 export default function Logic(props) {
   let [loaded] = useFonts({
@@ -22,8 +34,10 @@ export default function Logic(props) {
   if (!loaded) return null;
 
   return (
-    <ViewsFlow>
-      <View {...props} />
+    <ViewsFlow initialState={{ ['/App']: 'Onboarding' }}>
+      <DataProvider context="user" value={value}>
+        <View {...props} />
+      </DataProvider>
     </ViewsFlow>
   );
 }
